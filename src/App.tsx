@@ -4,16 +4,20 @@ import QuoteIconMobile from "./assets/pattern-divider-mobile.svg";
 import { useAdvice } from "./hooks/useAdvice";
 
 function App() {
-  const { advice, handleClick } = useAdvice();
+  const { advice, loading, handleClick } = useAdvice();
 
   return (
     <div className="py-7 px-5 flex flex-col gap-8 items-center justify-center relative">
-      <div className="flex flex-col text-center gap-4">
-        <span className="text-primary-Neon-Green tracking-widest text-xs font-medium">
-          ADVICE #{advice?.id}
-        </span>
-        <p className="md:text-quote">"{advice?.advice}"</p>
-      </div>
+      {loading ? (
+        <p>Loading advice...</p>
+      ) : (
+        <div className="flex flex-col text-center gap-4">
+          <span className="text-primary-Neon-Green tracking-widest text-xs font-medium">
+            ADVICE #{advice?.id}
+          </span>
+          <p className="md:text-quote">"{advice?.advice}"</p>
+        </div>
+      )}
 
       <div className="flex flex-col gap-5 items-center justify-center pb-7">
         <picture>
