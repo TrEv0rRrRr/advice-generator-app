@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import "tailwindcss";
+
+@theme {
+  /* Primary */
+
+  --color-primary-Light-Cyan: hsl(193, 38%, 86%);
+  --color-primary-Neon-Green: hsl(150, 100%, 66%);
+
+  /* Neutral */
+
+  --color-neutral-Grayish-Blue: hsl(217, 19%, 38%);
+  --color-neutral-Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --color-neutral-Dark-Blue: hsl(218, 23%, 16%);
+
+  /* Text Size */
+  --text-quote: 1.75rem;
+
+  /* Fonts */
+  --font-primary: "Manrope";
+  --font-weight-bold: 800;
+
+  /* Shadow */
+  --shadow-neon: 0 0 25px 0 var(--color-primary-Neon-Green);
+}
