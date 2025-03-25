@@ -8,6 +8,7 @@ type Advice = {
 export const useAdvice = () => {
   const [advice, setAdvice] = useState<Advice | null>(null);
   const [loading, setLoading] = useState(true);
+
   const API_URL = "https://api.adviceslip.com/advice";
 
   useEffect(() => {
