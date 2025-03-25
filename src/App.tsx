@@ -7,7 +7,10 @@ function App() {
   const { advice, loading, handleClick } = useAdvice();
 
   return (
-    <div className="py-7 px-5 flex flex-col gap-8 items-center justify-center relative">
+    <div
+      className="py-7 px-5 flex flex-col gap-8 items-center justify-center relative"
+      role="main"
+    >
       {loading ? (
         <p className="font-bold text-quote text-center" role="status">
           Loading advice...
