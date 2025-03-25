@@ -21,9 +21,13 @@ export const useAdvice = () => {
   }, [API_URL]);
 
   const handleClick = () => {
+    setLoading(true);
     fetch(API_URL)
       .then((response) => response.json())
-      .then((data) => setAdvice(data.slip))
+      .then((data) => {
+        setAdvice(data.slip);
+        setLoading(false);
+      })
       .catch((error) => console.error("Error fetching advice:", error));
   };
 
