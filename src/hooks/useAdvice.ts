@@ -7,12 +7,16 @@ type Advice = {
 
 export const useAdvice = () => {
   const [advice, setAdvice] = useState<Advice | null>(null);
+  const [loading, setLoading] = useState(true);
   const API_URL = "https://api.adviceslip.com/advice";
 
   useEffect(() => {
     fetch(API_URL)
       .then((response) => response.json())
-      .then((data) => setAdvice(data.slip))
+      .then((data) => {
+        setAdvice(data.slip);
+        setLoading(false);
+      })
       .catch((error) => console.error("Error fetching advice:", error));
   }, [API_URL]);
 
@@ -23,5 +27,5 @@ export const useAdvice = () => {
       .catch((error) => console.error("Error fetching advice:", error));
   };
 
-  return { advice, handleClick };
+  return { advice, loading, handleClick };
 };
