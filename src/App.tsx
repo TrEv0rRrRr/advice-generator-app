@@ -28,7 +28,7 @@ function App() {
 
         <button
           aria-label="Generate a new advice"
-          className="bg-primary-Neon-Green p-3.5 rounded-full w-12 h-12 flex items-center justify-center absolute top-57 hover:shadow-neon transition duration-300 cursor-pointer"
+          className="bg-primary-Neon-Green p-3.5 rounded-full w-12 h-12 flex items-center justify-center absolute -bottom-5 hover:shadow-neon transition duration-300 cursor-pointer"
           onClick={handleClick}
         >
           <img src={DiceIcon} alt="" aria-hidden />
